@@ -46,6 +46,7 @@ export class HomeComponent implements OnInit {
   submit() {
     this.api.carddata(this.pancardform.value).subscribe((res: any) => {
       console.log('res', res);
+       window.location.reload();
     });
   }
   edit(p: any) {
