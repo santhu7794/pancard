@@ -71,6 +71,8 @@ export class HomeComponent implements OnInit {
     alert('update successfully');
     window.location.reload();
   }
+
+  
   deletepan(d: any) {
     let a = d._id;
     console.log(a);
