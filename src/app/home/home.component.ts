@@ -25,14 +25,14 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
     this.pancardform = this.form.group({
       Cardholder: [''],
-      purpose: [''],
+      Category: [''],
       fathername: [''],
       email: [''],
       mobile: [''],
     });
     this.editpancardform = this.form.group({
       Cardholder: [''],
-      purpose: [''],
+      Category: [''],
       fathername: [''],
       email: [''],
       mobile: [''],
@@ -55,7 +55,7 @@ export class HomeComponent implements OnInit {
     console.log(this.pid);
     this.editpancardform.patchValue({
       Cardholder: p.Cardholder,
-      purpose: p.purpose,
+      Category: p.Category,
       fathername: p.fathername,
       email: p.email,
       mobile: p.mobile,

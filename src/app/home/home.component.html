@@ -11,14 +11,18 @@
           holder="enter name"
           formControlName="Cardholder"
         />
-        <label class="form-label">purpose</label>
-        <input
-          type="text"
-          class="form-control"
-          place
-          holder="enter of pan purpose"
-          formControlName="purpose"
-        />
+        <div class="">
+          <label class="form-label"> Category</label>
+          <select class="form-select" aria-label="Default select example" formControlName="Category">
+            <option selected disabled>-- select --</option>
+            <option value="individual">individual</option>
+            <option value="Association of persons">Association of persons</option>
+            <option value="Body of individuals">Body of individuals</option>
+            <option value="Company">Company</option>
+            <option value="Trust">Trust</option>
+            <option value="Firm">Firm</option>
+          </select>
+        </div>
         <label class="form-label">fathername</label>
         <input
           type="text"
@@ -55,7 +59,7 @@
     <thead>
       <tr>
         <th>Cardholder</th>
-        <th>purpose</th>
+        <th>Category</th>
         <th>fathername</th>
         <th>email</th>
         <th>mobile</th>
@@ -65,7 +69,7 @@
     <tbody>
       <tr *ngFor="let p of pancard">
         <td>{{ p.Cardholder }}</td>
-        <td>{{ p.purpose }}</td>
+        <td>{{ p.Category }}</td>
         <td>{{ p.fathername }}</td>
         <td>{{ p.email }}</td>
         <td>{{ p.mobile }}</td>
@@ -157,14 +161,16 @@
                         holder="enter name"
                         formControlName="Cardholder"
                       />
-                      <label class="form-label">purpose</label>
-                      <input
-                        type="text"
-                        class="form-control"
-                        place
-                        holder="enter of pan purpose"
-                        formControlName="purpose"
-                      />
+                      <label class="form-label">Category</label>
+                      <select class="form-select" aria-label="Default select example" formControlName="Category">
+                        <option selected disabled>-- select --</option>
+                        <option value="individual">individual</option>
+                        <option value="Association of persons">Association of persons</option>
+                        <option value="Body of individuals">Body of individuals</option>
+                        <option value="Company">Company</option>
+                        <option value="Trust">Trust</option>
+                        <option value="Firm">Firm</option>
+                      </select>
                       <label class="form-label">fathername</label>
                       <input
                         type="text"
